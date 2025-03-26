@@ -43,6 +43,7 @@ function calculateCredits() {
     var finalTotal = totalExcludingWorst + borderline;
     
     document.querySelector(".borderline").textContent = borderline;
+    document.querySelector(".borderlineReason").textContent = borderlineReason;
     document.querySelector(".total").textContent = finalTotal;
 
     var classOfHonours = "Unknown";
