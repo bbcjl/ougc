@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The Unofficial OU Grade Calculator (for apprenticeships only)</title>
+        <title>The Unofficial OU Grade Calculator (for DTS apprenticeships only)</title>
         <link rel="stylesheet" href="style.css">
         <script type="module" src="script.js"></script>
     </head>
     <body>
-        <h1>The Unofficial OU Grade Calculator (for apprenticeships only)</h1>
+        <h1>The Unofficial OU Grade Calculator (for DTS apprenticeships only)</h1>
         <p>Made by James Livesey</p>
         <p>Based on <a href="https://help.open.ac.uk/documents/policies/working-out-your-class-of-honours/files/252/Understanding%20your%20Class%20of%20Honours%20Bachelors%20May%2023.pdf" target="_blank">the Open University's Class of Honours Guidance Document (May 2023)</a></p>
+        <p>
+            <label for="specialism">Your specialism:</label>
+            <select id="specialism">
+                <option value="se">Software Engineer</option>
+                <option value="cs">Cyber Security</option>
+                <option value="da" disabled>Data Analyst*</option>
+                <option value="ne" disabled>Network Engineer*</option>
+                <option value="other">Other</option>
+            </select>
+        </p>
         <table>
             <tr>
                 <th>Level</th>
@@ -48,7 +58,7 @@
             </tr>
             <tr>
                 <td class="level">3</td>
-                <td class="module"><input value="TMXY352"></td>
+                <td class="module special1"><input value="TMXY352"></td>
                 <td class="grade"><select></select></td>
                 <td class="credits"></td>
             </tr>
@@ -60,7 +70,7 @@
             </tr>
             <tr>
                 <td class="level">3</td>
-                <td class="module"><input value="TMXY354"></td>
+                <td class="module special2"><input value="TMXY354"></td>
                 <td class="grade"><select></select></td>
                 <td class="credits"></td>
             </tr>
@@ -109,5 +119,6 @@
             <tr><td>901-1170</td><td>Lower Second Class (2:2)</td></tr>
             <tr><td>1171-1440</td><td>Third Class</td></tr>
         </table>
+        <p><small>*Sorry data analysts and network engineers, but you appear to have an extra year 2 and one less year 3 module, which is a bit harder to calculate.</small></p>
     </body>
 </html>

@@ -60,7 +60,7 @@ function calculateCredits() {
 }
 
 window.addEventListener("load", function() {
-    document.querySelectorAll("select").forEach(function(select) {
+    document.querySelectorAll(".grade select").forEach(function(select) {
         select.innerHTML = `
             <option value="1">Distinction (85-100)</option>
             <option value="2">Grade 2 pass (70-84)</option>
@@ -71,6 +71,18 @@ window.addEventListener("load", function() {
         select.addEventListener("change", function() {
             calculateCredits();
         });
+    });
+
+    document.querySelector("#specialism").addEventListener("change", function(event) {
+        var specialism = event.target.value;
+        var special1 = "TMXY3xx";
+        var special2 = "TMXY3xx";
+
+        if (specialism == "se") {special1 = "TMXY352"; special2 = "TMXY354";}
+        if (specialism == "cs") {special1 = "TMXY352"; special2 = "TMXY311";}
+
+        document.querySelector(".special1 input").value = special1;
+        document.querySelector(".special2 input").value = special2;
     });
 
     calculateCredits();

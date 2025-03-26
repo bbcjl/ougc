@@ -21,7 +21,7 @@ th, td {
     padding-inline: 0.3rem;
 }
 
-input, select {
+td input, td select {
     background-color: #eeeeee;
     border: 0;
 }

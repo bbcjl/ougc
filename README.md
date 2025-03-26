@@ -1,2 +1,2 @@
-# The Unofficial OU Grade Calculator (for apprenticeships only)
+# The Unofficial OU Grade Calculator (for DTS apprenticeships only)
 Based on [the Open University's Class of Honours Guidance Document (May 2023)](https://help.open.ac.uk/documents/policies/working-out-your-class-of-honours/files/252/Understanding%20your%20Class%20of%20Honours%20Bachelors%20May%2023.pdf).
