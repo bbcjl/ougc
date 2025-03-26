@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Unofficial OU Grade Calculator (for apprenticeships only)</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="script.js"></script>
+    </head>
+    <body>
+        <h1>The Unofficial OU Grade Calculator (for apprenticeships only)</h1>
+        <p>Made by James Livesey</p>
+        <p>Based on <a href="https://help.open.ac.uk/documents/policies/working-out-your-class-of-honours/files/252/Understanding%20your%20Class%20of%20Honours%20Bachelors%20May%2023.pdf" target="_blank">the Open University's Class of Honours Guidance Document (May 2023)</a></p>
+        <table>
+            <tr>
+                <th>Level</th>
+                <th>Module</th>
+                <th>Grade</th>
+                <th>Credits</th>
+            </tr>
+            <tr>
+                <td class="level">2</td>
+                <td class="module"><input value="TXY227"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level">2</td>
+                <td class="module"><input value="MXY250"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level">2</td>
+                <td class="module"><input value="TMXY254"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level">2</td>
+                <td class="module"><input value="TTXY284"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level">3</td>
+                <td class="module"><input value="TMXY350"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level">3</td>
+                <td class="module"><input value="TMXY352"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level">3</td>
+                <td class="module"><input value="TMXY353"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level">3</td>
+                <td class="module"><input value="TMXY354"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+            <tr>
+                <td class="level final">3 (final)</td>
+                <td class="module"><input value="TMXY475"></td>
+                <td class="grade"><select></select></td>
+                <td class="credits"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td><strong class="subtotal"></strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Dropping worst level 3 grade (excludes final):</td>
+                <td><strong class="drop"></strong></td>
+                <td>(module dropped: <strong class="dropModule"></strong>)</td>
+            </tr>
+            <tr>
+                <td>Borderline test adjustment:</td>
+                <td><strong class="borderline"></strong></td>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td><strong class="total"></strong></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Honours classification:</td>
+                <td><strong class="classOfHonours"></strong></td>
+                <td></td>
+            </tr>
+            <tr class="moveUpRow">
+                <td>To move up, you need:</td>
+                <td><strong>-<span class="moveUp"></span></strong></td>
+            </tr>
+        </table>
+        <h2>Honours thresholds</h2>
+        <table>
+            <tr><th>Credits</th><th>Classification</th></tr>
+            <tr><td>360-630</td><td>First Class</td></tr>
+            <tr><td>631-900</td><td>Upper Second Class (2:1)</td></tr>
+            <tr><td>901-1170</td><td>Lower Second Class (2:2)</td></tr>
+            <tr><td>1171-1440</td><td>Third Class</td></tr>
+        </table>
+    </body>
+</html>

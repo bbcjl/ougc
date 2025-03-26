@@ -1,0 +1,31 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin-inline: max(calc(50vw - 500px), 2rem);
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin-block: 1rem;
+}
+
+th, td {
+    text-align: start;
+    padding: 0.1rem;
+    padding-inline: 0.3rem;
+}
+
+input, select {
+    background-color: #eeeeee;
+    border: 0;
+}
+
+td:has(input, select) {
+    background-color: #eeeeee;
+}
