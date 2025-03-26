@@ -22,10 +22,15 @@ th, td {
 }
 
 td input, td select {
+    width: 100%;
     background-color: #eeeeee;
     border: 0;
 }
 
 td:has(input, select) {
     background-color: #eeeeee;
+}
+
+.calc475 {
+    float: right;
 }

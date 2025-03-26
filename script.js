@@ -23,7 +23,6 @@ function calculateCredits() {
         }
 
         row.querySelector(".credits").innerHTML = `${level - 1} × (30 × ${grade}) = <strong>${credits}</strong>`;
-        console.log(level, grade);
 
         totalCredits += credits;
     });
@@ -60,6 +59,43 @@ function calculateCredits() {
     document.querySelector(".moveUpRow").style.display = moveUp > 0 ? "table-row" : "none";
 }
 
+function calculate475() {
+    var totalScore = 0;
+    var grade = 5;
+    var failedEma = false;
+
+    document.querySelectorAll(".calc475Results tr:has(.score)").forEach(function(row) {
+        var isEma = row.classList.contains("ema");
+        var weight = parseInt(row.querySelector(".weight").textContent) / 100;
+        var score = Number(row.querySelector(".score input").value);
+
+        totalScore += Math.max(Math.min(score, 100) * weight, 0);
+
+        if (isEma && score < 30) {
+            failedEma = true;
+        }
+    });
+
+    totalScore = Math.round(totalScore);
+
+    document.querySelector(".calc475Score").textContent = totalScore;
+
+    if (totalScore >= 85 && totalScore <= 100) {grade = 1;}
+    if (totalScore >= 70 && totalScore <= 84) {grade = 2;}
+    if (totalScore >= 55 && totalScore <= 69) {grade = 3;}
+    if (totalScore >= 40 && totalScore <= 54) {grade = 4;}
+    if (totalScore <= 39) {grade = 5;}
+    if (failedEma) {grade = 5;}
+
+    document.querySelector(".calc475Grade").textContent = ["Distinction", "Grade 2 pass", "Grade 3 pass", "Grade 4 pass", "Fail"][grade - 1];
+
+    if (grade < 5) {
+        document.querySelector(".score475 select").value = String(grade);
+
+        document.querySelector(".score475 select").dispatchEvent(new Event("change"));
+    }
+}
+
 window.addEventListener("load", function() {
     document.querySelectorAll(".grade select").forEach(function(select) {
         select.innerHTML = `
@@ -71,6 +107,12 @@ window.addEventListener("load", function() {
 
         select.addEventListener("change", function() {
             calculateCredits();
+        });
+    });
+
+    document.querySelectorAll(".calc475Results input").forEach(function(input) {
+        input.addEventListener("change", function() {
+            calculate475();
         });
     });
 
@@ -87,4 +129,5 @@ window.addEventListener("load", function() {
     });
 
     calculateCredits();
+    calculate475();
 });

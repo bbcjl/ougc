@@ -9,6 +9,56 @@
         <h1>The Unofficial OU Grade Calculator (for DTS apprenticeships only)</h1>
         <p>Made by James Livesey</p>
         <p>Based on <a href="https://help.open.ac.uk/documents/policies/working-out-your-class-of-honours/files/252/Understanding%20your%20Class%20of%20Honours%20Bachelors%20May%2023.pdf" target="_blank">the Open University's Class of Honours Guidance Document (May 2023)</a></p>
+        <aside class="calc475">
+            <h2>TMXY475 grade calculator</h2>
+            <table class="calc475Results">
+                <tr>
+                    <th>Assignment</th>
+                    <th>Weighting</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>TMA01</td>
+                    <td class="weight">5%</td>
+                    <td class="score"><input type="number" min="0" max="100" value="85"></td>
+                </tr>
+                <tr>
+                    <td>TMA02</td>
+                    <td class="weight">10%</td>
+                    <td class="score"><input type="number" min="0" max="100" value="85"></td>
+                </tr>
+                <tr>
+                    <td>TMA03</td>
+                    <td class="weight">10%</td>
+                    <td class="score"><input type="number" min="0" max="100" value="85"></td>
+                </tr>
+                <tr class="ema">
+                    <td>EMA (Part 1)</td>
+                    <td class="weight">60%</td>
+                    <td class="score"><input type="number" min="0" max="100" value="85"></td>
+                </tr>
+                <tr class="ema">
+                    <td>EMA (Part 2)</td>
+                    <td class="weight">15%</td>
+                    <td class="score"><input type="number" min="0" max="100" value="85"></td>
+                </tr>
+                <tr>
+                    <td>Gateway</td>
+                    <td>0%</td>
+                    <td>Not applicable</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Overall score</td>
+                    <td><strong class="calc475Score"></strong></td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td><strong class="calc475Grade"></strong></td>
+                </tr>
+            </table>
+        </aside>
         <p>
             <label for="specialism">Your specialism:</label>
             <select id="specialism">
@@ -77,7 +127,7 @@
             <tr>
                 <td class="level final">3 (final)</td>
                 <td class="module"><input value="TMXY475"></td>
-                <td class="grade"><select></select></td>
+                <td class="grade score475"><select></select></td>
                 <td class="credits"></td>
             </tr>
         </table>
